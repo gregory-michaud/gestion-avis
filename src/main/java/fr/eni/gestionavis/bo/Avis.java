@@ -10,23 +10,24 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
 
-@Document(collection = "reviews" )
+@Document(collection = "reviews")
 public class Avis {
 
     @Id
     private String id;
 
-    @Field
+
     private int note;
 
     @Field(name = "commentary")
     private String commentaire;
 
-    @Field
     private LocalDateTime date;
+
+    private Client client;
 }
