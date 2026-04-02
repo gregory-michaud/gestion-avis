@@ -1,7 +1,6 @@
 package fr.eni.gestionavis.clefcomposite;
 
 import fr.eni.gestionavis.bo.vin.Bouteille;
-import fr.eni.gestionavis.bo.vin.BouteilleId;
 import fr.eni.gestionavis.dal.BouteilleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.MethodOrderer;
@@ -24,16 +23,12 @@ public class TestBouteilleDocument {
 
     @Test
     void test_save_bouteille() {
-        BouteilleId bouteilleId = BouteilleId
-                .builder()
-                .idBouteille(2298)
-                .idRegion(5)
-                .idCouleur(1)
-                .build();
-
+        int bouteilleId = 2298;
         Bouteille bouteille = Bouteille
                 .builder()
-                .id(bouteilleId)
+                .idBouteille(bouteilleId)
+                .idRegion(5)
+                .idCouleur(1)
                 .nom("Vin Blanc ENI")
                 .build();
         bouteilleRepository.save(bouteille);

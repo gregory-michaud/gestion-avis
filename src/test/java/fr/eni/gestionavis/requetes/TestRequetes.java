@@ -2,7 +2,6 @@ package fr.eni.gestionavis.requetes;
 
 import fr.eni.gestionavis.bo.Avis;
 import fr.eni.gestionavis.bo.vin.Bouteille;
-import fr.eni.gestionavis.bo.vin.BouteilleId;
 import fr.eni.gestionavis.dal.AvisRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.MethodOrderer;
@@ -49,15 +48,13 @@ public class TestRequetes {
     void test03_findByBouteille() {
         final Bouteille b = Bouteille
                 .builder()
-                .id(BouteilleId
-                        .builder()
-                        .idBouteille(18298)
-                        .idRegion(3)
-                        .idCouleur(1)
-                        .build())
+                .idBouteille(18298)
+                .idRegion(3)
+                .idCouleur(1)
                 .nom("Vin ENI Edition")
                 .build();
-        List<Avis> listeAvis = avisRepository.findByBouteille(b);
+       // List<Avis> listeAvis = avisRepository.findByBouteille(b);
+        List<Avis> listeAvis = avisRepository.findByBouteilleIdBouteille(18298);
         assertThat(listeAvis).isNotNull();
         assertThat(listeAvis).isNotEmpty();
         assertThat(listeAvis.size()).isEqualTo(3);

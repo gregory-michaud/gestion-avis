@@ -3,7 +3,6 @@ package fr.eni.gestionavis.requetes;
 import fr.eni.gestionavis.bo.Avis;
 import fr.eni.gestionavis.bo.Client;
 import fr.eni.gestionavis.bo.vin.Bouteille;
-import fr.eni.gestionavis.bo.vin.BouteilleId;
 import fr.eni.gestionavis.dal.AvisRepository;
 import fr.eni.gestionavis.dal.BouteilleRepository;
 import org.junit.jupiter.api.Test;
@@ -31,34 +30,25 @@ class DataPourRequetes {
 
 		listeBouteilles.add(Bouteille
 				.builder()
-				.id(BouteilleId
-						.builder()
-						.idBouteille(18298)
-						.idRegion(3)
-						.idCouleur(1)
-						.build())
+				.idBouteille(18298)
+				.idRegion(3)
+				.idCouleur(1)
 				.nom("Vin ENI Edition")
 				.build());
 
 		listeBouteilles.add(Bouteille
 				.builder()
-				.id(BouteilleId
-						.builder()
-						.idBouteille(1298)
-						.idRegion(3)
-						.idCouleur(2)
-						.build())
+				.idBouteille(1298)
+				.idRegion(3)
+				.idCouleur(2)
 				.nom("Vin ENI Service")
 				.build());
 
 		listeBouteilles.add(Bouteille
 				.builder()
-				.id(BouteilleId
-						.builder()
-						.idBouteille(1999)
-						.idRegion(2)
-						.idCouleur(3)
-						.build())
+				.idBouteille(1999)
+				.idRegion(2)
+				.idCouleur(3)
 				.nom("Vin ENI Ecole")
 				.build());
 
