@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gestion-avis
+  data:
+    mongodb:
+      username: sa
+      password: MotDePasseFort123!
+      port: 27017
+      database: Gestion_Avis
+      authentication-database: admin
+
+#log
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+
