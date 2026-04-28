@@ -9,6 +9,7 @@ spring:
       database: Gestion_Avis
       authentication-database: admin
 
+
 #log
 logging:
   level:
