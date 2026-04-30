@@ -64,7 +64,7 @@ public class TestAssociationAvisBouteille {
         assertThat(avisDB.getClient()).isEqualTo(client);
 
         // Vérifier que le Bouteille est complet
-        assertThat(avisDB.getBouteille().getId()).isNotNull();
+        assertThat(avisDB.getBouteille().getIdBouteille()).isNotNull();
         assertThat(avisDB.getBouteille()).isEqualTo(bouteilleDB);
 
         log.info(avisDB.toString());
